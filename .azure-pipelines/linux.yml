@@ -1,0 +1,12 @@
+trigger:
+- master
+
+jobs:
+- job: build
+  dependsOn: []
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  container: envoyproxy/envoy-build:latest
+  steps:
+  - bash: |
+      bazel build //source/exe:envoy
