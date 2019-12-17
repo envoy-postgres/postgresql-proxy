@@ -10,3 +10,4 @@ jobs:
   steps:
   - bash: |
       bazel build //source/exe:postgresql-proxy
+    displayName: "Build postgresql-proxy"
