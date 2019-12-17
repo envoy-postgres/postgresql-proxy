@@ -1,5 +1,7 @@
 ## PostgreSQL Proxy
 
+[![Build Status](https://dev.azure.com/envoy-postgres/postgresql-proxy/_apis/build/status/envoy-postgres.postgresql-proxy?branchName=master)](https://dev.azure.com/envoy-postgres/postgresql-proxy/_build/latest?definitionId=1&branchName=master)
+
 To build this project, please prepare your machine following the instructions [here](https://github.com/envoyproxy/envoy/blob/master/bazel/README.md).
 
 TL;DR
