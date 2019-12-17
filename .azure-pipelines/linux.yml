@@ -5,8 +5,8 @@ jobs:
 - job: build
   dependsOn: []
   pool:
-    vmImage: 'Ubuntu 16.04'
-  container: envoyproxy/envoy-build:latest
+    name: default
+    demands: agent.name -equals RBE
   steps:
   - bash: |
       bazel build //source/exe:postgresql-proxy
