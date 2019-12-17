@@ -1,0 +1,39 @@
+admin:
+    access_log_path: /dev/null
+    address:
+      socket_address:
+        address: 127.0.0.1
+        port_value: 8000
+
+  static_resources:
+    clusters:
+    - name: postgresql_cluster
+      connect_timeout: 1s
+      type: STRICT_DNS
+      load_assignment:
+        cluster_name: postgresql_cluster
+        endpoints:
+        - lb_endpoints:
+          - endpoint:
+              address:
+                socket_address:
+                  address: localhost
+                  port_value: 5432
+
+    listeners:
+    - name: listener
+      address:
+        socket_address:
+          address: 0.0.0.0
+          port_value: 54322
+      filter_chains:
+      - filters:
+        - name: envoy.filters.network.postgresql_proxy
+          typed_config:
+            "@type": type.googleapis.com/envoy.config.filter.network.postgresql_proxy.v1alpha1.PostgreSQLProxy
+            stat_prefix: egress_postgresql
+        - name: envoy.tcp_proxy
+          typed_config:
+            "@type": type.googleapis.com/envoy.config.filter.network.tcp_proxy.v2.TcpProxy
+            stat_prefix: tcp_postgresql
+            cluster: postgresql_cluster

@@ -66,6 +66,7 @@ public:
   Network::FilterStatus onWrite(Buffer::Instance& data, bool end_stream) override;
 
 private:
+  Network::ReadFilterCallbacks* read_callbacks_{};
   PostgreSQLFilterConfigSharedPtr config_;
 };
 
