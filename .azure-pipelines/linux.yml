@@ -9,4 +9,4 @@ jobs:
   container: envoyproxy/envoy-build:latest
   steps:
   - bash: |
-      bazel build //source/exe:envoy
+      bazel build //source/exe:postgresql-proxy
