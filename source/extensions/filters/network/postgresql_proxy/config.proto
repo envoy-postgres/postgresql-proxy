@@ -3,7 +3,7 @@ syntax = "proto3";
 package envoy.config.filter.network.postgresql_proxy.v1alpha1;
 
 option java_package = "io.envoyproxy.envoy.config.filter.network.postgresql_proxy.v1alpha1";
-option java_outer_classname = "PostgreProxyProto";
+option java_outer_classname = "PostgreSQLProxyProto";
 option java_multiple_files = true;
 
 import "validate/validate.proto";
