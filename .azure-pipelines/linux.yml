@@ -5,7 +5,6 @@ jobs:
 - job: build
   dependsOn: []
   pool:
-    name: default
     demands: agent.name -equals RBE
   steps:
   - bash: |
