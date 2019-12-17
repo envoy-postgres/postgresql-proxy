@@ -9,5 +9,6 @@ jobs:
     demands: agent.name -equals RBE
   steps:
   - bash: |
+      cp /home/diorahman/azure/bazelrc/*.bazelrc .
       bazel build //source/exe:postgresql-proxy
     displayName: "Build postgresql-proxy"
