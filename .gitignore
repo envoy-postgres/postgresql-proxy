@@ -1,0 +1,11 @@
+/bazel-*
+.idea/*
+docker/envoy
+*.iml
+*.swp
+*.test
+/artifacts
+clang.bazelrc
+user.bazelrc
+**/plugin.wasm
+compile_commands.json

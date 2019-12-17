@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package envoy.config.filter.network.postgresql_proxy.v1alpha1;
+
+option java_package = "io.envoyproxy.envoy.config.filter.network.postgresql_proxy.v1alpha1";
+option java_outer_classname = "PostgreProxyProto";
+option java_multiple_files = true;
+
+import "validate/validate.proto";
+
+// [#protodoc-title: PostgreSQL proxy]
+// PostgreSQL Proxy.
+// [#extension: envoy.filters.network.postgresql_proxy]
+message PostgreSQLProxy {
+  // The human readable prefix to use when emitting statistics.
+  string stat_prefix = 1 [(validate.rules).string = {min_bytes: 1}];
+}
