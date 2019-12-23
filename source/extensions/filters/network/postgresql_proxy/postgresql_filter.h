@@ -16,15 +16,7 @@ namespace PostgreSQLProxy {
  * All PostgreSQL proxy stats. @see stats_macros.h
  */
 #define ALL_POSTGRESQL_PROXY_STATS(COUNTER)                                                        \
-  COUNTER(sessions)                                                                                \
-  COUNTER(login_attempts)                                                                          \
-  COUNTER(login_failures)                                                                          \
-  COUNTER(decoder_errors)                                                                          \
-  COUNTER(protocol_errors)                                                                         \
-  COUNTER(upgraded_to_ssl)                                                                         \
-  COUNTER(auth_switch_request)                                                                     \
-  COUNTER(queries_parsed)                                                                          \
-  COUNTER(queries_parse_error)
+  COUNTER(sessions)
 
 /**
  * Struct definition for all PostgreSQL proxy stats. @see stats_macros.h

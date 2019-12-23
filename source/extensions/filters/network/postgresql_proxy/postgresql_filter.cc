@@ -19,6 +19,7 @@ Network::FilterStatus PostgreSQLFilter::onData(Buffer::Instance& data, bool) {
   return Network::FilterStatus::Continue;
 }
 Network::FilterStatus PostgreSQLFilter::onNewConnection() {
+  config_->stats_.sessions_.inc();
   return Network::FilterStatus::Continue;
 }
 void PostgreSQLFilter::initializeReadFilterCallbacks(Network::ReadFilterCallbacks& callbacks) {
