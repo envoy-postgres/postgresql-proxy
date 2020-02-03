@@ -2,7 +2,7 @@ workspace(name = "envoy_postgres_extension")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-ENVOY_SHA = "6d816ad9af0527e63ac58d0ffe7eac29bfe56d62"
+ENVOY_SHA = "bb7ceff4c3c5bd4555dff28b6e56d27f2f8be0a7"
 
 http_archive(
     name = "envoy",
